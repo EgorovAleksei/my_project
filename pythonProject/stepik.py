@@ -1,10 +1,25 @@
-x = 12
+from jinja2 import Template
+#from jinja2.filters import escape
+from markupsafe import escape
 
-print(x // 6)
 
-if x > 10:
-    print(x)
+data = '''{% raw %}Модуль jinja вместо
+определения {{ name }}
+подставляет соответствующее значение{% endraw %}'''
 
-print ('main')
 
+
+tm = Template(data)
+msg = tm.render(name='Федор')
+print(msg)
+print()
+
+
+link = '''В HTML-документе ссылка определяются так:
+<a href="#">Ссылка</a>'''
+
+msg = escape(link)
+
+
+print(msg)
 

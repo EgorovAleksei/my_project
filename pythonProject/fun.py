@@ -8,3 +8,5 @@
 
 def privet():
     print('Hello world!!!')
+
+def xx(x):
