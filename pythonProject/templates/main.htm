@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>   	 	
+         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+         <base href="https://proproprogs.ru/">
+         <title>Про программирование</title>
+</head>
+<body>
+ 
+<ul>
+{% for u in users -%}
+    <li>{{u.name}} возраст {{u.old}} вес {{u.weight}}
+{% endfor -%}
+</ul>
+ 
+</body>
+</html>
